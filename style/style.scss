@@ -1,0 +1,637 @@
+$color1: #f8f9f7;
+$color2: #84947b; //vert olive
+$color3: #e1e9e1;
+$color4: #2f2e2e;
+$color5: #aeb8ae;
+$color6: #d3e0d3;
+$color7: #8b8585;
+$color8: #b2996b;
+$color9: #ffffff;
+$color10: #dddddd;
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/Metropolis-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Futura-Light";
+  src: url("../fonts/Futura-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Didot-Light";
+  src: url("../fonts/Didot-Light-ital.ttf") format("truetype");
+}
+@font-face {
+  font-family: "roboto-light";
+  src: url("../fonts/roboto-light.ttf") format("truetype");
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+// ===== HEADER =====
+
+header {
+  font-family: "Futura-Light";
+  align-items: center;
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      background-color: $color1;
+      height: 50px;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: $color4;
+      }
+      li:hover {
+        font-size: 110%;
+      }
+    }
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    color: $color2;
+    gap: 20px;
+    margin: 30px;
+    img {
+      height: auto;
+      width: 150px;
+    }
+  }
+  margin-bottom: 30px;
+}
+
+// ===== FOOTER =====
+
+footer {
+  font-family: "Futura-Light";
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      background-color: $color1;
+      height: 50px;
+      align-items: center;
+      li {
+        padding-right: 20px;
+        a {
+          text-decoration: none;
+          color: $color4;
+        }
+      }
+      div {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  margin-top: 30px;
+}
+
+// ===== A PROPOS =====
+
+.aPropos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+  img {
+    height: 350px;
+    width: 50%;
+    padding-right: 3%;
+    object-fit: cover;
+  }
+  div {
+    height: 350px;
+    width: 50%;
+    .bonjour {
+      font-family: "Didot-Light";
+    }
+    .text {
+      font-family: "roboto-light";
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+}
+
+// ===== LISTE RECETTES =====
+
+.listeRecettes {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  .recettes {
+    .card {
+      border: 1px solid $color5;
+      display: flex;
+      flex-direction: column;
+      font-family: "Metropolis";
+      gap: 25px;
+      padding: 5%;
+
+      .card-image {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        .card-post {
+          color: $color2;
+        }
+        .card-title {
+          font-size: 20px;
+        }
+        .card-text {
+          text-align: justify;
+          text-justify: inter-word;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          button {
+            background-color: $color2;
+            color: $color9;
+            border: none;
+            text-align: center;
+            width: 100%;
+            height: 35px;
+            transition-duration: 0.4s;
+          }
+          button:hover {
+            background-color: #76a877; /* Green */
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ===== RECETTE (DETAIL) =====
+
+.detailRecette {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .recettes {
+    .card {
+      border: 1px solid $color5;
+      display: flex;
+      flex-direction: column;
+      font-family: "Metropolis";
+      gap: 25px;
+      padding: 5%;
+
+      .card-image {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        .card-post {
+          color: $color2;
+        }
+        .card-title {
+          font-size: 20px;
+        }
+        .card-text {
+          text-align: justify;
+          text-justify: inter-word;
+        }
+        .listCom {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 10px;
+        }
+      }
+    }
+  }
+  .commentaire {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .titre2 {
+    font-family: "Metropolis";
+    font-size: 16px;
+  }
+  textarea {
+    width: 100%;
+  }
+  .submit {
+    display: flex;
+    justify-content: center;
+
+    button {
+      background-color: $color2;
+      border: none;
+      color: $color9;
+      text-align: center;
+      width: 300px;
+      height: 35px;
+    }
+    :hover {
+      background-color: #76a877; /* Green */
+      color: white;
+    }
+  }
+  //////////////////////////
+  .recettesRecentes {
+    display: flex;
+    justify-content: space-between;
+
+    .recettes {
+      width: 32%;
+      .card {
+        border: 1px solid $color5;
+        display: flex;
+        flex-direction: column;
+        font-family: "Metropolis";
+        gap: 25px;
+
+        .card-image {
+          width: 100%;
+          height: 300px;
+          overflow: hidden;
+          position: relative;
+
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        .card-body {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+          .card-post {
+            color: $color2;
+          }
+          .card-title {
+            font-size: 16px;
+          }
+          .card-text {
+            text-align: justify;
+            text-justify: inter-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
+          }
+          form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            button {
+              background-color: $color2;
+              color: $color9;
+              border: none;
+              text-align: center;
+              width: 100%;
+              height: 35px;
+              transition-duration: 0.4s;
+            }
+            :hover {
+              background-color: #76a877; /* Green */
+              color: white;
+            }
+          }
+          .listCom {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+// ===== CONTACT / CONNEXION / INSCRIPTION / AJOUT =====
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: "Futura-Light";
+  color: $color2;
+  width: 50%;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      font-size: 25px;
+      text-align: center;
+      color: $color2;
+      a {
+        text-decoration: none;
+        color: $color2;
+      }
+    }
+    .buttonAdmin {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color2;
+        border: none;
+        color: $color9;
+        width: 150px;
+        height: 35px;
+        text-decoration: none;
+      }
+    }
+    .erreur {
+      color: rgb(158, 0, 0);
+      font-size: 15px;
+    }
+    .divButton {
+      display: flex;
+      justify-content: center;
+      button {
+        background-color: $color2;
+        border: none;
+        color: $color9;
+        text-align: center;
+        width: 300px;
+        height: 35px;
+      }
+      button:hover {
+        background-color: #76a877; /* Green */
+        color: white;
+      }
+    }
+  }
+}
+// ===== ACCEUIL (INDEX) =====
+
+.acceuil {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  .topAcceuil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .titre {
+      font-family: "Futura-Light";
+      font-size: 25px;
+      color: $color2;
+    }
+    .sousTitre {
+      font-family: "Metropolis";
+      color: $color4;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+
+  .bloqueAcceuil {
+    display: flex;
+
+    .left {
+      margin-right: 3%;
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        .bonjour {
+          font-family: "Didot-Light";
+        }
+        .text {
+          font-family: "roboto-light";
+          text-align: justify;
+          text-justify: inter-word;
+        }
+        ul {
+          display: flex;
+          justify-content: space-around;
+          list-style: none;
+          height: 50px;
+          align-items: center;
+          li {
+            padding-right: 20px;
+          }
+        }
+        .elu {
+          font-family: "Didot-Light";
+          font-size: 30px;
+          text-align: center;
+        }
+        .recetteSmall {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: "Metropolis";
+            flex-wrap: wrap;
+            gap: 25px;
+
+            .card-image {
+              width: 100%;
+              height: 200px;
+              overflow: hidden;
+              position: relative;
+              object-fit: cover;
+
+              img {
+                width: 120%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+            .card-body {
+              height: auto;
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+
+              .card-text {
+                p {
+                  text-align: justify;
+                  text-justify: inter-word;
+                }
+              }
+              button {
+                background-color: $color2;
+                border: none;
+                color: $color9;
+                text-align: center;
+                width: 100%;
+                height: 35px;
+              }
+              button:hover {
+                background-color: #76a877; /* Green */
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right {
+      .listeRecettes {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// ===== ADMIN =====
+
+.admin {
+  width: 50%;
+  font-family: "Futura-Light";
+  color: $color2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  p {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .buttonAdmin {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color2;
+      border: none;
+      color: $color9;
+      width: 150px;
+      height: 35px;
+      text-decoration: none;
+    }
+    a:hover {
+      background-color: #76a877; /* Green */
+      color: white;
+    }
+  }
+  table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+    tr {
+      border: 1px solid $color2;
+
+      th {
+        background-color: $color6;
+        color: $color4;
+        border: 1px solid $color2;
+        padding: 1%;
+      }
+      td {
+        color: $color4;
+        border: 1px solid $color2;
+        padding: 0.5%;
+
+        .btn-modif {
+          background-color: $color8;
+          border: none;
+          color: $color9;
+          width: 100px;
+          height: 35px;
+          text-decoration: none;
+        }
+        .btn-delete {
+          background-color: rgba(212, 41, 41, 0.767);
+          border: none;
+          color: $color9;
+          width: 100px;
+          height: 35px;
+          text-decoration: none;
+        }
+      }
+      .valide {
+        background-color: #ade4ae !important;
+      }
+      .non {
+        background-color: rgba(245, 163, 163, 0.767) !important;
+      }
+    }
+  }
+}
+
+// ===== MODIF =====
